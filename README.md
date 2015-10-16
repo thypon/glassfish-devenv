@@ -30,6 +30,11 @@ Create the virtual machine and installs all the needed packages:
 
 From now on your glassfish source code should be inside src/ directory. To start working on the code run Eclipse following [this video guide](nolinkfornow).
 
+Lightweight Environment
+-----------------------
+
+For a lightweight approach on older PCs it's advised to install ubuntu on bare metal following what's written in [[README.ubuntu]].
+
 Usefull Links
 -------------
 
