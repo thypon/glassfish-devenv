@@ -1,0 +1,18 @@
+#!/bin/bash
+
+apt-get -yq update
+# Install Essential Development Tools
+apt-get -yq install build-essential maven
+# Install Repo Tools
+apt-get -yq install subversion
+# Install Editors
+apt-get -yq install eclipse
+
+MAINUSER="$(getent passwd "1000" | cut -d: -f1)"
+
+su $MAINUSER -c "eclipse \
+	-clean -purgeHistory \
+	-application org.eclipse.equinox.p2.director \
+	-noSplash \
+	-repository http://download.eclipse.org/technology/m2e/releases \
+	-installIUs org.eclipse.m2e.feature.feature.group"
