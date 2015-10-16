@@ -1,5 +1,5 @@
-Lightweight Environmen
-======================
+Lightweight Environment
+=======================
 
 It's possible to run the same commands from the virtual machine on bare metal on ubuntu.
 The scripts are supported on Ubuntu 14.04LTS but are known to work also on later revisions.
