@@ -10,9 +10,9 @@ apt-get -yq install eclipse
 
 MAINUSER="$(getent passwd "1000" | cut -d: -f1)"
 
-su $MAINUSER -c "eclipse \
-	-clean -purgeHistory \
-	-application org.eclipse.equinox.p2.director \
-	-noSplash \
-	-repository http://download.eclipse.org/technology/m2e/releases \
-	-installIUs org.eclipse.m2e.feature.feature.group"
+#su $MAINUSER -c "eclipse \
+#	-clean -purgeHistory \
+#	-application org.eclipse.equinox.p2.director \
+#	-noSplash \
+#	-repository http://download.eclipse.org/technology/m2e/releases,http://www.fuin.org/p2-repository,http://download.eclipse.org/modeling/emf/updates/releases/ \
+#	-installIUs org.eclipse.m2e.feature.feature.group"
