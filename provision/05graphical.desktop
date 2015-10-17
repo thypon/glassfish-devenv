@@ -5,4 +5,4 @@ apt-get install -yq xubuntu-desktop || apt-get -fyq install
 mkdir -p /etc/X11/xorg.conf.d/
 cp /vagrant/provision/conf/keyboard /etc/default/
 cp /vagrant/provision/conf/lightdm.conf /etc/lightdm/
-restart lightdm
+reboot
