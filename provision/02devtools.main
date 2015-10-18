@@ -2,21 +2,11 @@
 
 apt-get -yq update
 # Install Essential Development Tools
-apt-get -yq install build-essential
+apt-get -yq install build-essential maven
 # Install Repo Tools
 apt-get -yq install subversion
 # Install Editors
 apt-get -yq install eclipse
-
-export MVN_VERSION="3.3.3"
-
-if [ ! -d /opt/maven ]; then
-	curl -L http://apache.arvixe.com/maven/maven-3/${MVN_VERSION}/binaries/apache-maven-${MVN_VERSION}-bin.tar.gz > /tmp/maven.tar.gz
-	mkdir /opt/maven
-	tar --strip-components=1 -xf /tmp/maven.tar.gz -C /opt/maven
-	mkdir -p /etc/profile.d
-	cp /vagrant/provision/conf/maven.sh /etc/profile.d/maven.sh
-fi
 
 MAINUSER="$(getent passwd "1000" | cut -d: -f1)"
 
