@@ -1,0 +1,1 @@
+_JAVA_OPTIONS=="-Xmx1024m"
