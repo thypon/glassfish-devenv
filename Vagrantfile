@@ -9,7 +9,7 @@ Vagrant.configure(2) do |config|
   config.vm.provider "virtualbox" do |vb|
     vb.gui = true unless ENV['HEADLESS']
     vb.cpus = 2
-    vb.memory = "2048"
+    vb.memory = ENV['MEMORY'] || "2560"
   end
 
   config.vm.provision "shell", inline: "for S in /vagrant/provision/*.main; do bash $S; done"
