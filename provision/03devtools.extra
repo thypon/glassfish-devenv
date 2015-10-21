@@ -2,7 +2,9 @@
 
 apt-get -yq update
 
-apt-get -yq netbeans emacs # vim nano
+apt-get -yq install netbeans emacs # vim nano
+
+IDEA_VERSION=14.1.4
 
 if [ ! -d /opt/idea ]; then
         curl -L https://download.jetbrains.com/idea/ideaIC-${IDEA_VERSION}.tar.gz > /tmp/idea.tar.gz
