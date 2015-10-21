@@ -10,8 +10,7 @@ apt-get -yq install eclipse
 
 MAINUSER="$(getent passwd "1000" | cut -d: -f1)"
 
-mkdir -p /vagrant/provision/conf/
-cp /vagrant/provision/conf/java.sh /etc/profile.d/java.sh
+cp provision/conf/java.sh /etc/profile.d/java.sh || cp /vagrant/provision/conf/java.sh /etc/profile.d/java.sh
 
 su $MAINUSER -c "eclipse \
 	-clean -purgeHistory \
