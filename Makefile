@@ -22,6 +22,6 @@ eclipse: src
 	mvn -f src/pom.xml eclipse:eclipse
 
 prepare-env:
-	for S in /vagrant/provision/*.main; do bash $S; done
+	for S in provision/*.main; do $$S; done
 
 .DEFAULT_GOAL = build
